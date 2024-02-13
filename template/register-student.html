@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="QR Code Attendance System" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="QR Code Attendance System" />
+	<meta property="og:description" content="QR Code Attendance System" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="{% static 'assets/images/favicon_gjkg.ico' %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon' %}" />
+
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>QR Code Attendance System</title>
+
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]-->
+	<script src="{% static 'assets/js/html5shiv.min.js' %}"></script>
+	<script src="{% static 'assets/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/assets.css' %}">
+
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/typography.css' %}">
+  	<link href="{% static 'assets/vendors/fonts/Montserrat-Regular.ttf' %}" rel="stylesheet">
+
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/shortcodes/shortcodes.css' %}">
+
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static 'assets/css/color/color-1.css' %}">
+
+	<!-- REVOLUTION SLIDER CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/layers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/settings.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/navigation.css' %}">
+	<!-- REVOLUTION SLIDER END -->	
+</head>
+<body id="bg">
+<div class="page-wraper">
+	<div id="loading-icon-bx"></div>
+	<div class="account-form">
+		<div class="account-head" style="background-image:url(static/assets/images/caleb-repo/blog_image_17.jpg);">
+			<a href="/"><img src="{% static 'assets/images/caleb-repo/caleb-logo-1.png' %}" alt=""></a>
+		</div>
+		<div class="account-form-inner">
+			<div class="account-container">
+				<p id="message_code" style="color: red; margin: 20px 0px;"></p>
+				<div class="heading-bx left">
+					<h2 class="title-head">Student <span>Register</span></h2>
+					<p>Login Your Account <a href="/login">Click here</a></p>
+				</div>	
+				<form class="contact-bx">
+					<div class="row placeani">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group">
+									<label>Full Name</label>
+									<input name="dzName" type="text" id="input_fullname" required="" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group">
+									<label>School Email Address</label>
+									<input name="dzName_p" type="email" id="input_email" required="" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group"> 
+									<label>Matric No</label>
+									<input name="dzEmail_v" type="text" id="input_matric" class="form-control" required="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group"> 
+									<label>Level</label>
+									<input name="dzEmail_f" type="text" id="input_level" class="form-control" required="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group"> 
+									<label>Department</label>
+									<input name="dzEmail_e" type="text" id="input_department" class="form-control" required="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 m-b30">
+							<a name="submit" class="btn button-md" id="signup-button">Sign Up</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- External JavaScripts -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js' %}"></script>
+<script src="{% static 'assets/vendors/magnific-popup/magnific-popup.js' %}"></script>
+<script src="{% static 'assets/vendors/counter/waypoints-min.js' %}"></script>
+<script src="{% static 'assets/vendors/counter/counterup.min.js' %}"></script>
+<script src="{% static 'assets/vendors/imagesloaded/imagesloaded.js' %}"></script>
+<script src="{% static 'assets/vendors/masonry/masonry.js' %}"></script>
+<script src="{% static 'assets/vendors/masonry/filter.js' %}"></script>
+<script src="{% static 'assets/vendors/owl-carousel/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/js/functions.js' %}"></script>
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script type="text/javascript">
+	$('#signup-button').on('click', function(e){
+			e.preventDefault();
+			console.log("active login session");
+			var fullname = document.querySelector("#input_fullname");
+			var email = document.querySelector("#input_email");
+			var matric = document.querySelector("#input_matric");
+			var level = document.querySelector("#input_level");
+			var department = document.querySelector("#input_department");
+			$.ajax({
+				type: 'GET',
+				url: "{% url 'authenticate_student' %}",
+				data: {
+					"fullname": fullname.value,
+					"email": email.value,
+					"matric": matric.value,
+					"level": level.value,
+					"department": department.value,
+				},
+
+				success: function(response)
+				{
+					email.value = ""
+					fullname.value = ""
+					matric.value = ""
+					level.value = ""
+					department.value = ""
+					console.log(response.message)
+					if (response.message == "success")
+					{
+						console.log("success")
+						window.location.href = "/otp"
+					}
+					else
+					{
+						console.log(response.message)
+						$("#message_code").html(response.message)
+					}
+				}
+			})
+		})
+</script>
+</body>
+
+</html>

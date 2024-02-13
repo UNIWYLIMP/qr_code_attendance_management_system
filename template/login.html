@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="QR Code Attendance System" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="QR Code Attendance System" />
+	<meta property="og:description" content="QR Code Attendance System" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="{% static 'assets/images/favicon_gjkg.ico' %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon' %}" />
+
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>QR Code Attendance System</title>
+
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]-->
+	<script src="{% static 'assets/js/html5shiv.min.js' %}"></script>
+	<script src="{% static 'assets/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/assets.css' %}">
+
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/typography.css' %}">
+  	<link href="{% static 'assets/vendors/fonts/Montserrat-Regular.ttf' %}" rel="stylesheet">
+
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/shortcodes/shortcodes.css' %}">
+
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static 'assets/css/color/color-1.css' %}">
+
+	<!-- REVOLUTION SLIDER CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/layers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/settings.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/revolution/css/navigation.css' %}">
+	<!-- REVOLUTION SLIDER END -->	
+</head>
+<body id="bg">
+<div class="page-wraper">
+	<div id="loading-icon-bx"></div>
+	<div class="account-form">
+		<div class="account-head" style="background-image:url(static/assets/images/caleb-repo/blog_image_17.jpg);">
+			<a href="/"><img src="{% static 'assets/images/caleb-repo/caleb-logo-1.png' %}" alt="" style="width: 320px;"></a>
+		</div>
+		<div class="account-form-inner">
+			<div class="account-container">
+				{% for message in messages %}
+				<h5 style="color:red; margin: 0px; padding: 0px; padding-bottom: 20px;">{{message}}!</h5>
+				{% endfor %}
+				<p id="message_code" style="color: red; margin: 20px 0px;"></p>
+				<div class="heading-bx left">
+					<h2 class="title-head">Login to your <span>Account</span></h2>
+					<p>Don't have an account? <a href="/student_register">Create one here</a></p>
+				</div>	
+				<form class="contact-bx">
+					<div class="row placeani">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group">
+									<label>Your School Mail</label>
+									<input id="input_email" name="dzName" type="email" required="" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group"> 
+									<label>Your Password</label>
+									<input id="input_password" name="dzEmail" type="password" class="form-control" required="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group form-forget">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+									<label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+								</div>
+								<a href="/forgot_password" class="ml-auto">Forgot Password?</a>
+							</div>
+						</div>
+						<div class="col-lg-12 m-b30">
+							<a name="submit" class="btn button-md" id="login-button">Login</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- External JavaScripts -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js' %}"></script>
+<script src="{% static 'assets/vendors/magnific-popup/magnific-popup.js' %}"></script>
+<script src="{% static 'assets/vendors/counter/waypoints-min.js' %}"></script>
+<script src="{% static 'assets/vendors/counter/counterup.min.js' %}"></script>
+<script src="{% static 'assets/vendors/imagesloaded/imagesloaded.js' %}"></script>
+<script src="{% static 'assets/vendors/masonry/masonry.js' %}"></script>
+<script src="{% static 'assets/vendors/masonry/filter.js' %}"></script>
+<script src="{% static 'assets/vendors/owl-carousel/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/js/functions.js' %}"></script>
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script type="text/javascript">
+	console.log("hello");
+	$('#login-button').on('click', function(e){
+			e.preventDefault();
+			console.log("active login session");
+			var email = document.querySelector("#input_email");
+			var password = document.querySelector("#input_password");
+			if (email.value == "" && password.value == "")
+			{
+
+			}
+			else
+			{
+				$.ajax({
+					type: 'GET',
+					url: "{% url 'authenticate_login' %}",
+					data: {
+						"email": email.value,
+						"password": password.value
+					},
+
+					success: function(response)
+					{
+						email.value = ""
+						password.value = ""
+						if (response.message == "success"){
+							console.log("success")
+							window.location.href = "/dashboard"
+						}
+						else
+						{
+							$("#message_code").html(response.message)
+						}
+					}
+				})
+			}
+		})
+</script>
+</body>
+
+</html>
